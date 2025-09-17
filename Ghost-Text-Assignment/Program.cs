@@ -19,9 +19,8 @@ Console.WriteLine("");
 
 //finds out how many years ago you died
 int death = int.Parse(Console.ReadLine());
-int yourDeath = death;
 int currentYear = DateTime.Now.Year;
-int died = currentYear - yourDeath;
+int died = currentYear - death;
 Console.WriteLine("");
 Console.WriteLine($"Hunter: Wow this ghost died {died} years ago!");
 Console.WriteLine("");
@@ -32,11 +31,11 @@ Console.WriteLine("Narrator: one of the hunters speak into the radio and say");
 Console.WriteLine("Hunter: Do you wish to hurt us.");
 
 string hurt = Console.ReadLine();
-string hurtJournal = hurt;
+
 
 if  (hurt.ToLower() == "yes")
 {
-    Console.WriteLine("Hunter: Guys i'd be carefull, this ghost seems agressive!");
+    Console.WriteLine("Hunter: Guys i'd be careful, this ghost seems agressive!");
 }
 
 else if (hurt.ToLower() == "no")
@@ -47,4 +46,24 @@ else if (hurt.ToLower() == "no")
 else
 {
     Console.WriteLine($"Hunter: {hurt} was utter nonesense, this ghost seems a bit strange...");
+}
+
+Console.WriteLine("Narrator: You hear a flick come from the basement, followed by");
+Console.WriteLine("Hunter: Generators on!");
+Console.WriteLine("Narrator: You see one of the hunters flick a light switch on, and the blaring lights come to life");
+Console.WriteLine("Narrator: do you wish to leave the light on, or turn it back off?");
+Console.WriteLine("");
+
+string lights = Console.ReadLine();
+
+if (lights == "on" )
+{
+    Console.WriteLine("Narrator: You leave the lights on, but start to get this strange feeling");
+    Console.WriteLine("Narrator: Your head starts pounding, and you start getting dizzy");
+    Console.WriteLine("Narrator: You snap out of it, and as you do the light bulbs in the room explode, leaving you in darkness");
+}
+
+else if (lights == "off" )
+{
+    Console.WriteLine("Narrator: you rush to the lights as fast as you can and switch them back off");
 }
